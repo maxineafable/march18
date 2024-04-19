@@ -4,6 +4,12 @@ const nRows = document.querySelectorAll('.n')
 const gRows = document.querySelectorAll('.g')
 const oRows = document.querySelectorAll('.o')
 
+document.querySelectorAll('.toggle').forEach(row => {
+  row.addEventListener('click', e => {
+    e.target.classList.toggle('color');
+  })
+})
+
 let bLetter = false
 let iLetter = false
 let nLetter = false
@@ -31,7 +37,7 @@ function rollNewNumber(maxNumber) {
         if (!winningNumbers.includes(bNum)) {
           winningNumbers.push(bNum)
         }
-        bRow.style.color = 'orange'
+        // bRow.style.color = 'orange'
       }
     })
 
@@ -43,7 +49,7 @@ function rollNewNumber(maxNumber) {
         if (!winningNumbers.includes(iNum)) {
           winningNumbers.push(iNum)
         }
-        iRow.style.color = 'orange'
+        // iRow.style.color = 'orange'
       }
     })
 
@@ -55,7 +61,7 @@ function rollNewNumber(maxNumber) {
         if (!winningNumbers.includes(nNum)) {
           winningNumbers.push(nNum)
         }
-        nRow.style.color = 'orange'
+        // nRow.style.color = 'orange'
       }
     })
 
@@ -67,7 +73,7 @@ function rollNewNumber(maxNumber) {
         if (!winningNumbers.includes(gNum)) {
           winningNumbers.push(gNum)
         }
-        gRow.style.color = 'orange'
+        // gRow.style.color = 'orange'
       }
     })
 
@@ -79,14 +85,14 @@ function rollNewNumber(maxNumber) {
         if (!winningNumbers.includes(oNum)) {
           winningNumbers.push(oNum)
         }
-        oRow.style.color = 'orange'
+        // oRow.style.color = 'orange'
       }
     })
 
     if (bLetter && iLetter && nLetter && gLetter && oLetter) {
-      console.log('BINGO')
-      console.log(`Winning #: ${winningNumbers}`)
-      console.log(`Roll Count: ${count}`)
+      // console.log('BINGO')
+      // console.log(`Winning #: ${winningNumbers}`)
+      // console.log(`Roll Count: ${count}`)
       break
     }
   }
